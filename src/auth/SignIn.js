@@ -1,27 +1,22 @@
-// SignIn.js - Sign in or login for existing users
+// SignIn Page for users to login to the website
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Styles.css'; 
+import '../Styles.css';
 
-// Define the functional component
 function SignIn() {
-  // State to store the input value
   const [email, setEmail] = useState('');
 
-  // Handle form submission
   const handleSignIn = (event) => {
     event.preventDefault();
 
-    // Retrieve login data from local storage
     const loginData = JSON.parse(localStorage.getItem('loginData'));
 
-    // Check if login data is available
     if (!loginData) {
       alert('Invalid Email ID');
     } else if (loginData[0].email === email) {
       localStorage.removeItem('flagforindex');
       localStorage.setItem('flagforindex', true);
-      alert('Welcome to eBay');
+      alert('Welcome to Scalable-Auction-System');
       window.location.href = 'index.html';
     } else {
       localStorage.removeItem('flagforindex');
@@ -30,7 +25,6 @@ function SignIn() {
     }
   };
 
-  // JSX structure
   return (
     <div id="shcontainer">
       <div id="shc1">
@@ -55,10 +49,10 @@ function SignIn() {
           <p>
             To buy and sell on{' '}
             <a href="index.html">
-              <b>www.ebay.com</b>
+              <b>www.Scalable-Auction-System.com</b>
             </a>{' '}
-            or other eBay sites internationally, existing users can login using their credentials or new users can
-            register an eBay account on ebay.in. Kindly note you can no longer buy or sell on eBay.in.
+            or other Scalable-Auction-System sites internationally, existing users can login using their credentials or new users can
+            register an Scalable-Auction-System account on Scalable-Auction-System.in. Kindly note you can no longer buy or sell on Scalable-Auction-System.in.
           </p>
         </div>
       </div>
@@ -67,7 +61,7 @@ function SignIn() {
       </div>
       <div id="shc5">
         <h4>
-          Sign in to eBay or <a href="register.html">create an account</a>
+          Sign in to Scalable-Auction-System or <a href="register.html">create an account</a>
         </h4>
       </div>
       <div id="shc6">
@@ -87,14 +81,6 @@ function SignIn() {
             </h2>
           </button>
           <hr />
-          <button style={{ backgroundColor: '#4267b2', color: 'white', border: '1px solid #3665f3', display: 'flex' }}>
-            <FontAwesomeIcon icon={['fab', 'facebook-square']} style={{ fontSize: '35px', marginLeft: '5px', marginTop: '2px' }} />
-            <h2 style={{ marginLeft: '30px', marginTop: '10px' }}>
-              <b>Continue with Facebook</b>
-            </h2>
-          </button>
-          {/* Continue with Google button */}
-          {/* Continue with Apple button */}
         </div>
       </div>
       <div id="shc7">
@@ -113,7 +99,7 @@ function SignIn() {
       <hr />
       <div id="shc10">
         <p>
-          Copyright © 1995-2022 eBay Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Cookies, Do not
+          Copyright © 1995-2022 Scalable-Auction-System Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Cookies, Do not
           sell my personal information and AdChoice
         </p>
       </div>
@@ -121,5 +107,4 @@ function SignIn() {
   );
 }
 
-// Export the component
 export default SignIn;
