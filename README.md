@@ -1,5 +1,6 @@
 ### Structure so far
 
+`npm start` to run the code
 ```
 /Users/nvsr/Downloads/Final-Project-Scalable-Auction-System
 ├── node_modules  [857 entries exceeds filelimit, not opening dir]

@@ -43,7 +43,7 @@ function Login() {
       <div id="shc4">
         <h2>Hello</h2>
       </div>
-      <div id="shc5">
+      <div id="nvs5">
         <h4>
           Login to Scalable-Auction-System or <a href="register.html">create an account</a>
         </h4>

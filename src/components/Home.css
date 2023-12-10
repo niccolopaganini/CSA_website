@@ -1,0 +1,54 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh; 
+  }
+  
+  #sc2 {
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px; /* Adjusted margin to move the entire #sc2 container up */
+  }
+  
+  #sc23 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fa-magnifying-glass {
+    font-size: 24px;
+  }
+  
+  input {
+    margin-top: 1px;
+    margin-left: 5px;
+    padding: 12px;
+    padding-left: 500px;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    margin-top: 1px;
+    margin-left: 5px;
+    padding: 12px 16px;
+    font-size: 18px;
+  }
+  
+  #sc6 {
+    margin-top: 20px;
+  }
+  
+  #sc6 img {
+    max-width: 100%;
+    height: auto;
+  }
+  
