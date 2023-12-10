@@ -8,6 +8,7 @@ import Auctions from './components/Auctions';
 import SignIn from './auth/SignIn'; 
 import Register from './auth/Register'; 
 import Login from './auth/Login';
+import CreateAuction from './components/CreateAuction';
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          {/* Add more routes for different pages */}
+          <Route path="/CreateAuction" element={<CreateAuction />} />
         </Routes>
       </div>
     </Router>
