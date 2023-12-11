@@ -1,31 +1,50 @@
 // Navbar - Navigation component
-import React from 'react';
-import { Link } from 'react-router-dom';
-// import './Navbar.css';
 
-const Navbar = () => {
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Navbar.css'; // Import your Navbar CSS file
+
+const Navbar = ({ isAuthenticated }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Implement logout logic and redirect to the home page
+    navigate('/');
+  };
+
   return (
-    <nav>
-      <ul style={{ display: 'flex', listStyle: 'none', padding: 0 }}>
-        <li style={{ marginRight: '20px'}}>
+    <nav-nvs>
+      <ul-nvs>
+        <li-nvs>
           <Link to="/">Home</Link>
-        </li>
-        <li style={{ marginRight: '1230px' }}>
+        </li-nvs>
+        <li-nvs>
           <Link to="/auctions">Auctions</Link>
-        </li>
-        <li style={{ marginRight: '20px' }}>
-          <Link to="/signin">Sign In</Link>
-        </li>
-        <li style={{ marginRight: '20px' }}>
-          <Link to="/register">Register</Link>
-        </li>
-        {/* <li style={{ marginRight: '20px' }}>
-          <Link to="/login">Login</Link>
-        </li> */}
-        {/* Add more links as needed */}
-      </ul>
-    </nav>
+        </li-nvs>
+        {isAuthenticated ? (
+          <>
+            <li-nvs>
+              <Link to="/my-biddings">My Biddings</Link>
+            </li-nvs>
+            <li-nvs>
+              <button className="logout-button" onClick={handleLogout}>
+                Logout
+              </button>
+            </li-nvs>
+          </>
+        ) : (
+          <>
+            <li-nvs>
+              <Link to="/signin">Sign In</Link>
+            </li-nvs>
+            <li-nvs>
+              <Link to="/register">Register</Link>
+            </li-nvs>
+          </>
+        )}
+      </ul-nvs>
+    </nav-nvs>
   );
-}
+};
 
 export default Navbar;

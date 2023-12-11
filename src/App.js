@@ -9,6 +9,7 @@ import SignIn from './auth/SignIn';
 import Register from './auth/Register'; 
 import Login from './auth/Login';
 import CreateAuction from './components/CreateAuction';
+import MyBiddings from './components/MyBiddings';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/CreateAuction" element={<CreateAuction />} />
+          <Route path="/my-biddings" element={<MyBiddings />} /> 
         </Routes>
       </div>
     </Router>

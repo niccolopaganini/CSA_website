@@ -30,6 +30,7 @@ const Home = () => {
     <div className="home-container">
       {/* Header */}
       <div id="sc2">
+      <h1>Welcome to Scalable Auction System</h1>
         <div id="sc23">
           <i className="fa-solid fa-magnifying-glass" style={{ marginLeft: '5px' }}></i>
           <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />

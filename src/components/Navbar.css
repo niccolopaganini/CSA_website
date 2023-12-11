@@ -1,26 +1,23 @@
 /* Navbar.css */
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .navbar-brand {
-    font-size: 24px;
-    color: #fff; /* Set your desired text color */
-    text-decoration: none;
-  }
-  
-  .navbar-links {
-    display: flex;
-    gap: 20px; /* Adjust the gap between links as needed */
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: #fff; /* Set your desired text color */
-    font-size: 18px;
-  }
-  
+nav-nvs {
+  padding: 10px;
+}
+
+ul-nvs {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li-nvs {
+  margin-right: 20px;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

@@ -1,11 +1,9 @@
-// Auction.js - display all auctions component
+// Auctions.js
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import CreateAuction from './CreateAuction';
 
-
-const Auction = () => {
+const Auctions = () => {
   const [auctions, setAuctions] = useState([]);
 
   useEffect(() => {
@@ -40,6 +38,13 @@ const Auction = () => {
     fetchData();
   }, []);
 
+  const [userBid, setUserBid] = useState(0);
+
+  const handleBid = (auctionId) => {
+    // Placeholder logic for placing a bid
+    console.log(`Placed bid ${userBid} on auction ${auctionId}`);
+  };
+
   return (
     <div>
       <h1>Auctions</h1>
@@ -49,15 +54,25 @@ const Auction = () => {
             <h2>{auction.title}</h2>
             <p>{auction.description}</p>
             <p>Current Bid: ${auction.currentBid}</p>
+            <div>
+              <label htmlFor={`bidInput${auction.id}`}>Your Bid:</label>
+              <input
+                type="number"
+                id={`bidInput${auction.id}`}
+                value={userBid}
+                onChange={(e) => setUserBid(e.target.value)}
+              />
+              <button onClick={() => handleBid(auction.id)}>Place Bid</button>
+            </div>
           </li>
         ))}
       </ul>
       {/* Display the CreateAuction component when on the /create-auction route */}
       <p>
-         <a href="/CreateAuction">Want to create a New Auction?</a>
+        <Link to="/CreateAuction">Want to create a New Auction?</Link>
       </p>
     </div>
   );
 };
 
-export default Auction;
+export default Auctions;
