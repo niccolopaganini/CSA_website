@@ -1,0 +1,25 @@
+/* Auction.css */
+
+.auction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    /* background-color: #f0f0f0;  Background color for the whole page */
+  }
+  
+  .form-wrapper {
+    max-width: 1000px; 
+    max-height: 1000px; 
+    width: 100%;
+    padding: 25px;
+    background-color: yellow; /* Background color for the form wrapper */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle border */
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* Adjust the gap between form elements */
+  }
+  

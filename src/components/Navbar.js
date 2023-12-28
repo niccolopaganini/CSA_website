@@ -2,30 +2,37 @@
 
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Navbar.css'; // Import your Navbar CSS file
+import './Navbar.css';
 
 const Navbar = ({ isAuthenticated }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Implement logout logic and redirect to the home page
+    // logout logic comes here
     navigate('/');
   };
 
   return (
-    <nav-nvs>
-      <ul-nvs>
+    <div className='navbar-container'>
+    <div className='navbar'>
+       <div className="navbar-title">
+        <h1>Cheron Sports Academy</h1>
+      </div>
+      <ul className='nav-list'>
         <li-nvs>
           <Link to="/">Home</Link>
         </li-nvs>
         <li-nvs>
-          <Link to="/auctions">Auctions</Link>
+          <Link to="/auctions">Current Students Form</Link>
+        </li-nvs>
+        <li-nvs>
+          <Link to="/interested">Interested?</Link>
         </li-nvs>
         {isAuthenticated ? (
           <>
-            <li-nvs>
+            {/* <li-nvs>
               <Link to="/my-biddings">My Biddings</Link>
-            </li-nvs>
+            </li-nvs> */}
             <li-nvs>
               <button className="logout-button" onClick={handleLogout}>
                 Logout
@@ -35,15 +42,13 @@ const Navbar = ({ isAuthenticated }) => {
         ) : (
           <>
             <li-nvs>
-              <Link to="/signin">Sign In</Link>
-            </li-nvs>
-            <li-nvs>
-              <Link to="/register">Register</Link>
+              <Link to="/signin">Coach Login</Link>
             </li-nvs>
           </>
         )}
-      </ul-nvs>
-    </nav-nvs>
+      </ul>
+    </div>
+    </div>
   );
 };
 
